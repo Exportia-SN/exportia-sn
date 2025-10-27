@@ -1,33 +1,27 @@
 import Link from "next/link";
-import Image from "next/image";
-import { Target, Globe, Shield, Package, Handshake, Search, Ship, Briefcase, Link2, Wheat, Building2, Cog, ShoppingCart, Lightbulb, ArrowUp } from "lucide-react";
+import { Target, Globe, Shield, Package, Handshake, Search, Ship, Briefcase, Link2, Wheat, Building2, Cog, ShoppingCart, Lightbulb } from "lucide-react";
 import BackToTop from "@/components/BackToTop";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/hero-cargo-port.jpg"
-          alt="Port international avec conteneurs"
-          fill
-          className="object-cover"
-          priority
-        />
+      <section 
+        className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{backgroundImage: "url('/images/hero-cargo-port.jpg')"}}
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/85 to-navy-900/70" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in-up">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Connecter l'Afrique au monde
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: "0.2s"}}>
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto leading-relaxed">
             Basée au Sénégal, <span className="text-gold-400 font-semibold">Exportia SN</span> est une société spécialisée dans l'exportation de produits agricoles, de matériaux de construction, de matières premières et de produits de consommation, ainsi que dans la consultation en commerce international.
           </p>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 bg-gold-600 hover:bg-gold-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-premium-lg hover:shadow-premium-xl hover:scale-105 animate-fade-in-up"
-            style={{animationDelay: "0.4s"}}
+            className="inline-flex items-center gap-2 bg-gold-600 hover:bg-gold-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 shadow-premium-lg hover:shadow-premium-xl hover:scale-105"
           >
             Découvrez nos services
             <span className="text-2xl">→</span>
@@ -237,14 +231,9 @@ export default function HomePage() {
             ].map((sector, index) => (
               <div
                 key={index}
-                className="group relative h-80 rounded-xl overflow-hidden shadow-premium-lg hover:shadow-premium-xl transition-all duration-300 hover:-translate-y-2"
+                className="group relative h-80 rounded-xl overflow-hidden shadow-premium-lg hover:shadow-premium-xl transition-all duration-300 hover:-translate-y-2 bg-cover bg-center"
+                style={{backgroundImage: `url('${sector.image}')`}}
               >
-                <Image
-                  src={sector.image}
-                  alt={sector.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/70 to-navy-900/30 group-hover:from-navy-900/98 group-hover:via-navy-900/85 transition-all duration-300" />
                 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -293,3 +282,4 @@ export default function HomePage() {
     </main>
   );
 }
+
