@@ -1,0 +1,22 @@
+# ExportiaSN robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /.next
+
+# Sitemap
+Sitemap: https://exportia-sn.netlify.app/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# User agents
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
