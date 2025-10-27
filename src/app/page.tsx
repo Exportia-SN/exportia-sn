@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Target, Globe, Shield, Package, Handshake, Search, Ship, Briefcase, Link2, Wheat, Building2, Cog, ShoppingCart, Lightbulb } from 'lucide-react';
 import SchemaOrganization from '@/components/SchemaOrganization';
 
 export const metadata = {
@@ -66,42 +67,45 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                emoji: '🎯',
-                title: 'Expertise locale et internationale',
-                description: 'Notre équipe combine une connaissance profonde des marchés africains avec une expertise internationale reconnue.',
-              },
-              {
-                emoji: '🌍',
-                title: 'Réseau solide de partenaires',
-                description: 'Partenaires fiables sur plusieurs continents pour garantir vos opérations d\'exportation.',
-              },
-              {
-                emoji: '✓',
-                title: 'Fiabilité et transparence',
-                description: 'Engagement envers la qualité, la fiabilité et la satisfaction client dans chaque transaction.',
-              },
-              {
-                emoji: '📦',
-                title: 'Maîtrise logistique',
-                description: 'Expertise complète des formalités logistiques et douanières pour un processus sans friction.',
-              },
-              {
-                emoji: '🤝',
-                title: 'Support durable et transparent',
-                description: 'Support durable et transparent adapté à vos besoins spécifiques et objectifs commerciaux.',
-              },
-            ].map((advantage, index) => (
-              <div 
-                key={index}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <div className="text-6xl mb-4">{advantage.emoji}</div>
-                <h3 className="text-xl font-bold text-navy-900 mb-3">{advantage.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-4">
+                <Target className="w-8 h-8 text-gold-600" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Expertise locale et internationale</h3>
+              <p className="text-gray-600 leading-relaxed">Notre équipe combine une connaissance profonde des marchés africains avec une expertise internationale reconnue.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-4">
+                <Globe className="w-8 h-8 text-gold-600" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Réseau solide de partenaires</h3>
+              <p className="text-gray-600 leading-relaxed">Partenaires fiables sur plusieurs continents pour garantir vos opérations d'exportation.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-4">
+                <Shield className="w-8 h-8 text-gold-600" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Fiabilité et transparence</h3>
+              <p className="text-gray-600 leading-relaxed">Engagement envers la qualité, la fiabilité et la satisfaction client dans chaque transaction.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-4">
+                <Package className="w-8 h-8 text-gold-600" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Maîtrise logistique</h3>
+              <p className="text-gray-600 leading-relaxed">Expertise complète des formalités logistiques et douanières pour un processus sans friction.</p>
+            </div>
+
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+              <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mb-4">
+                <Handshake className="w-8 h-8 text-gold-600" />
+              </div>
+              <h3 className="text-xl font-bold text-navy-900 mb-3">Support durable et transparent</h3>
+              <p className="text-gray-600 leading-relaxed">Support durable et transparent adapté à vos besoins spécifiques et objectifs commerciaux.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -116,66 +120,113 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                emoji: '🔍',
-                title: 'Recherche de marchés et opportunités commerciales',
-                benefits: [
-                  'Identification des marchés porteurs à l\'international',
-                  'Mise en relation avec acheteurs fiables',
-                  'Connexion avec distributeurs internationaux',
-                  'Intelligence commerciale stratégique',
-                ],
-              },
-              {
-                emoji: '🚢',
-                title: 'Exportation de produits',
-                benefits: [
-                  'Gestion complète du processus d\'exportation',
-                  'Conditionnement professionnel',
-                  'Documentation douanière',
-                  'Logistique et livraison sécurisée',
-                ],
-              },
-              {
-                emoji: '💼',
-                title: 'Consultation et accompagnement stratégique',
-                benefits: [
-                  'Structuration des opérations d\'exportation',
-                  'Compréhension des réglementations internationales',
-                  'Identification de nouveaux débouchés',
-                  'Stratégie de croissance durable',
-                ],
-              },
-              {
-                emoji: '🔗',
-                title: 'Intermédiation commerciale',
-                benefits: [
-                  'Interface sécurisée entre vendeurs et acheteurs',
-                  'Garantie de transparence',
-                  'Fluidité des transactions',
-                  'Gestion des risques commerciaux',
-                ],
-              },
-            ].map((service, index) => (
-              <div 
-                key={index}
-                className="bg-gradient-to-br from-navy-50 to-white p-8 rounded-xl border border-navy-100 hover:border-gold-500 transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-5xl">{service.emoji}</div>
-                  <h3 className="text-2xl font-bold text-navy-900 flex-1">{service.title}</h3>
+            <div className="bg-gradient-to-br from-navy-50 to-white p-8 rounded-xl border border-navy-100 hover:border-gold-500 transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Search className="w-7 h-7 text-gold-600" />
                 </div>
-                <ul className="space-y-3">
-                  {service.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-gray-700">
-                      <span className="text-gold-500 mt-1">→</span>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-2xl font-bold text-navy-900 flex-1">Recherche de marchés et opportunités commerciales</h3>
               </div>
-            ))}
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Identification des marchés porteurs à l'international</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Mise en relation avec acheteurs fiables</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Connexion avec distributeurs internationaux</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Intelligence commerciale stratégique</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-navy-50 to-white p-8 rounded-xl border border-navy-100 hover:border-gold-500 transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Ship className="w-7 h-7 text-gold-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy-900 flex-1">Exportation de produits</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Gestion complète du processus d'exportation</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Conditionnement professionnel</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Documentation douanière</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Logistique et livraison sécurisée</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-navy-50 to-white p-8 rounded-xl border border-navy-100 hover:border-gold-500 transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Briefcase className="w-7 h-7 text-gold-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy-900 flex-1">Consultation et accompagnement stratégique</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Structuration des opérations d'exportation</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Compréhension des réglementations internationales</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Identification de nouveaux débouchés</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Stratégie de croissance durable</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-navy-50 to-white p-8 rounded-xl border border-navy-100 hover:border-gold-500 transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Link2 className="w-7 h-7 text-gold-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-navy-900 flex-1">Intermédiation commerciale</h3>
+              </div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Interface sécurisée entre vendeurs et acheteurs</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Garantie de transparence</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Fluidité des transactions</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <span className="text-gold-500 mt-1">→</span>
+                  <span>Gestion des risques commerciaux</span>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div className="text-center mt-12">
@@ -199,57 +250,95 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Produits Agricoles',
-                image: '/images/agricultural-products.jpg',
-                description: 'Dattes, huile d\'olive, arachides, fruits secs et autres produits agricoles de qualité premium',
-                emoji: '🌾',
-              },
-              {
-                title: 'Matériaux de Construction',
-                image: '/images/construction-materials.jpg',
-                description: 'Ciment, fer à béton, briques, carreaux et matériaux de construction certifiés',
-                emoji: '🏗️',
-              },
-              {
-                title: 'Matières Premières',
-                image: '/images/raw-materials.jpg',
-                description: 'Minerais, métaux, ressources naturelles et matières premières industrielles',
-                emoji: '⚙️',
-              },
-              {
-                title: 'Produits de Consommation',
-                image: '/images/consumer-products.jpg',
-                description: 'Produits du quotidien, biens de consommation et articles divers pour marchés internationaux',
-                emoji: '🛒',
-              },
-              {
-                title: 'Services de Conseil',
-                image: '/images/consulting-services.jpg',
-                description: 'Accompagnement stratégique, études de marché et conseil en commerce international',
-                emoji: '💡',
-              },
-            ].map((secteur, index) => (
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
               <div 
-                key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-              >
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{
-                    backgroundImage: `url(${secteur.image})`,
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
-                
-                <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
-                  <div className="text-5xl mb-3">{secteur.emoji}</div>
-                  <h3 className="text-2xl font-bold mb-2">{secteur.title}</h3>
-                  <p className="text-gray-200 leading-relaxed">{secteur.description}</p>
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  backgroundImage: 'url(/images/agricultural-products.jpg)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
+              
+              <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
+                <div className="w-12 h-12 bg-gold-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Wheat className="w-7 h-7 text-gold-400" />
                 </div>
+                <h3 className="text-2xl font-bold mb-2">Produits Agricoles</h3>
+                <p className="text-gray-200 leading-relaxed">Dattes, huile d'olive, arachides, fruits secs et autres produits agricoles de qualité premium</p>
               </div>
-            ))}
+            </div>
+
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  backgroundImage: 'url(/images/construction-materials.jpg)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
+              
+              <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
+                <div className="w-12 h-12 bg-gold-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Building2 className="w-7 h-7 text-gold-400" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Matériaux de Construction</h3>
+                <p className="text-gray-200 leading-relaxed">Ciment, fer à béton, briques, carreaux et matériaux de construction certifiés</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  backgroundImage: 'url(/images/raw-materials.jpg)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
+              
+              <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
+                <div className="w-12 h-12 bg-gold-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Cog className="w-7 h-7 text-gold-400" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Matières Premières</h3>
+                <p className="text-gray-200 leading-relaxed">Minerais, métaux, ressources naturelles et matières premières industrielles</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  backgroundImage: 'url(/images/consumer-products.jpg)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
+              
+              <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
+                <div className="w-12 h-12 bg-gold-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <ShoppingCart className="w-7 h-7 text-gold-400" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Produits de Consommation</h3>
+                <p className="text-gray-200 leading-relaxed">Produits du quotidien, biens de consommation et articles divers pour marchés internationaux</p>
+              </div>
+            </div>
+
+            <div className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style={{
+                  backgroundImage: 'url(/images/consulting-services.jpg)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/80 to-transparent" />
+              
+              <div className="relative p-6 h-full flex flex-col justify-end min-h-[280px]">
+                <div className="w-12 h-12 bg-gold-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center mb-3">
+                  <Lightbulb className="w-7 h-7 text-gold-400" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Services de Conseil</h3>
+                <p className="text-gray-200 leading-relaxed">Accompagnement stratégique, études de marché et conseil en commerce international</p>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
