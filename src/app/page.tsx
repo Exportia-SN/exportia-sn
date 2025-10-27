@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Accueil | ExportiaSN",
@@ -17,20 +16,18 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      {/* Hero Section with Real Image */}
-      <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero-cargo-port.jpg"
-            alt="Port international moderne"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Dark Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-900/75" />
-        </div>
+      {/* Hero Section with CSS Background Image */}
+      <section 
+        className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/hero-cargo-port.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-900/75" />
 
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -78,7 +75,7 @@ export default function Home() {
             {/* Advantage 1 */}
             <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
@@ -93,7 +90,7 @@ export default function Home() {
             {/* Advantage 2 */}
             <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -108,7 +105,7 @@ export default function Home() {
             {/* Advantage 3 */}
             <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -123,7 +120,7 @@ export default function Home() {
             {/* Advantage 4 */}
             <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
@@ -138,7 +135,7 @@ export default function Home() {
             {/* Advantage 5 */}
             <div className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
               <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
@@ -173,7 +170,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/15 transition-all">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -207,7 +204,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/15 transition-all">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                   </svg>
                 </div>
@@ -241,7 +238,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/15 transition-all">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
@@ -275,7 +272,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/15 transition-all">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-gold-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
@@ -308,7 +305,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sectors Section with Images */}
+      {/* Sectors Section with CSS Background Images */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -325,14 +322,16 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Sector 1 */}
-            <Link href="/secteurs" className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/agricultural-products.jpg"
-                alt="Produits agricoles"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent" />
+            <Link 
+              href="/secteurs" 
+              className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              style={{
+                backgroundImage: 'url(/images/agricultural-products.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent group-hover:from-navy-950/95 transition-all" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="text-4xl mb-3">🌾</div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Produits agricoles</h3>
@@ -343,14 +342,16 @@ export default function Home() {
             </Link>
 
             {/* Sector 2 */}
-            <Link href="/secteurs" className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/construction-materials.jpg"
-                alt="Matériaux de construction"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent" />
+            <Link 
+              href="/secteurs" 
+              className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              style={{
+                backgroundImage: 'url(/images/construction-materials.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent group-hover:from-navy-950/95 transition-all" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="text-4xl mb-3">🏗️</div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Matériaux de construction</h3>
@@ -361,14 +362,16 @@ export default function Home() {
             </Link>
 
             {/* Sector 3 */}
-            <Link href="/secteurs" className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/raw-materials.jpg"
-                alt="Matières premières"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent" />
+            <Link 
+              href="/secteurs" 
+              className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              style={{
+                backgroundImage: 'url(/images/raw-materials.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent group-hover:from-navy-950/95 transition-all" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="text-4xl mb-3">⛏️</div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Matières premières</h3>
@@ -379,14 +382,16 @@ export default function Home() {
             </Link>
 
             {/* Sector 4 */}
-            <Link href="/secteurs" className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
-              <Image
-                src="/images/consumer-products.jpg"
-                alt="Produits de consommation"
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent" />
+            <Link 
+              href="/secteurs" 
+              className="group relative h-80 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+              style={{
+                backgroundImage: 'url(/images/consumer-products.jpg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/50 to-transparent group-hover:from-navy-950/95 transition-all" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <div className="text-4xl mb-3">🛒</div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Produits de consommation</h3>
