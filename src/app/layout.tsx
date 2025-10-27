@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { SchemaOrganization } from "@/components/SchemaOrganization";
+import SchemaOrganization from "@/components/SchemaOrganization";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://exportia-sn.netlify.app";
 const SITE_NAME = "ExportiaSN";

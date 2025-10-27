@@ -1,4 +1,4 @@
-export function SchemaOrganization() {
+export default function SchemaOrganization() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
